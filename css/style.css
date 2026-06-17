@@ -1,21 +1,21 @@
 /* ===========================================================
    Asmita Ghosh — Writing Portfolio
-   Design tokens — LIGHT THEME
+   Design tokens — DARK THEME (brightened)
    =========================================================== */
 
 :root {
-  --bg: #F7F4ED;
-  --surface: #FFFFFF;
-  --surface-hover: #EFEAE0;
-  --border: #DDD6C7;
-  --border-soft: #E8E2D5;
-  --text: #221F1A;
-  --text-muted: #5C564A;
-  --text-faint: #767066;
-  --accent: #C4582F;
-  --accent-soft: rgba(196, 88, 47, 0.10);
-  --accent-line: rgba(196, 88, 47, 0.4);
-  --ink-strike: #A39C8C;
+  --bg: #0E0D0C;
+  --surface: #1B1916;
+  --surface-hover: #232019;
+  --border: #38342C;
+  --border-soft: #292520;
+  --text: #FBF9F5;
+  --text-muted: #C9C3B6;
+  --text-faint: #8A847A;
+  --accent: #E08661;
+  --accent-soft: rgba(224, 134, 97, 0.16);
+  --accent-line: rgba(224, 134, 97, 0.4);
+  --ink-strike: #8A847A;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', -apple-system, sans-serif;
@@ -77,7 +77,7 @@ textarea:focus-visible {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(247, 244, 237, 0.86);
+  background: rgba(14, 13, 12, 0.82);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
 }
@@ -667,7 +667,7 @@ footer.site-footer {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(34, 31, 26, 0.55);
+  background: rgba(8, 7, 6, 0.78);
   backdrop-filter: blur(4px);
   z-index: 1000;
   display: none;
