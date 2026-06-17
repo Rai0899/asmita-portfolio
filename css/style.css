@@ -1,21 +1,21 @@
 /* ===========================================================
    Asmita Ghosh — Writing Portfolio
-   Design tokens
+   Design tokens — LIGHT THEME
    =========================================================== */
 
 :root {
-  --bg: #0E0D0C;
-  --surface: #161412;
-  --surface-hover: #1C1A17;
-  --border: #2A2722;
-  --border-soft: #201E1A;
-  --text: #F3EFE8;
-  --text-muted: #9A9388;
-  --text-faint: #5E5950;
-  --accent: #C4674A;
-  --accent-soft: rgba(196, 103, 74, 0.14);
-  --accent-line: rgba(196, 103, 74, 0.35);
-  --ink-strike: #6B6258;
+  --bg: #F7F4ED;
+  --surface: #FFFFFF;
+  --surface-hover: #EFEAE0;
+  --border: #DDD6C7;
+  --border-soft: #E8E2D5;
+  --text: #221F1A;
+  --text-muted: #5C564A;
+  --text-faint: #767066;
+  --accent: #C4582F;
+  --accent-soft: rgba(196, 88, 47, 0.10);
+  --accent-line: rgba(196, 88, 47, 0.4);
+  --ink-strike: #A39C8C;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', -apple-system, sans-serif;
@@ -55,7 +55,6 @@ img { max-width: 100%; display: block; }
   .wrap { padding: 0 20px; }
 }
 
-/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -65,7 +64,6 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ---------- Focus ---------- */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -75,14 +73,11 @@ textarea:focus-visible {
   border-radius: 2px;
 }
 
-/* ===========================================================
-   Nav
-   =========================================================== */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(14, 13, 12, 0.82);
+  background: rgba(247, 244, 237, 0.86);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
 }
@@ -157,7 +152,6 @@ textarea:focus-visible {
   .nav__toggle { display: block; }
 }
 
-/* mobile drawer */
 .nav__drawer {
   display: none;
   flex-direction: column;
@@ -174,9 +168,6 @@ textarea:focus-visible {
 }
 .nav__drawer a.active { color: var(--accent); }
 
-/* ===========================================================
-   Hero
-   =========================================================== */
 .hero {
   padding: 168px 0 64px;
   position: relative;
@@ -267,7 +258,6 @@ textarea:focus-visible {
   color: var(--accent);
 }
 
-/* ---------- Marquee ---------- */
 .marquee {
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
@@ -302,9 +292,6 @@ textarea:focus-visible {
   .marquee__track { animation: none; }
 }
 
-/* ===========================================================
-   Stats
-   =========================================================== */
 .stats {
   padding: 56px 0;
   border-bottom: 1px solid var(--border-soft);
@@ -334,9 +321,6 @@ textarea:focus-visible {
   .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
 }
 
-/* ===========================================================
-   Section heading pattern
-   =========================================================== */
 .section {
   padding: 96px 0;
 }
@@ -392,9 +376,6 @@ textarea:focus-visible {
 }
 .section__link:hover { color: var(--accent); border-color: var(--accent); }
 
-/* ===========================================================
-   Work grid / cards
-   =========================================================== */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -477,9 +458,6 @@ textarea:focus-visible {
 .card:hover .card__foot .arrow { transform: translateX(4px); color: var(--accent); }
 .card:hover .card__foot { color: var(--accent); }
 
-/* ===========================================================
-   What I Do — disciplines
-   =========================================================== */
 .disciplines {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -532,9 +510,6 @@ textarea:focus-visible {
   border-radius: 12px;
 }
 
-/* ===========================================================
-   Editing-marks signature motif
-   =========================================================== */
 .redline {
   position: relative;
 }
@@ -556,9 +531,6 @@ textarea:focus-visible {
   line-height: 1.6;
 }
 
-/* ===========================================================
-   Footer / Contact
-   =========================================================== */
 .contact-block {
   border-top: 1px solid var(--border-soft);
   padding: 96px 0 64px;
@@ -617,9 +589,6 @@ footer.site-footer {
   color: var(--text-faint);
 }
 
-/* ===========================================================
-   Filter tabs (Work page)
-   =========================================================== */
 .filters {
   display: flex;
   gap: 10px;
@@ -647,9 +616,6 @@ footer.site-footer {
   border-color: var(--text);
 }
 
-/* ===========================================================
-   About page
-   =========================================================== */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -698,13 +664,10 @@ footer.site-footer {
   margin-top: 8px;
 }
 
-/* ===========================================================
-   Modal — full piece reader
-   =========================================================== */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(8, 7, 6, 0.78);
+  background: rgba(34, 31, 26, 0.55);
   backdrop-filter: blur(4px);
   z-index: 1000;
   display: none;
@@ -818,7 +781,6 @@ footer.site-footer {
   font-style: italic;
 }
 
-/* utility */
 .fade-up {
   opacity: 0;
   transform: translateY(16px);
