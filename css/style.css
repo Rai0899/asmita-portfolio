@@ -1,6 +1,6 @@
 /* ===========================================================
    Asmita Ghosh — Writing Portfolio
-   Design tokens — LIGHT THEME
+   Design tokens
    =========================================================== */
 
 :root {
@@ -55,6 +55,7 @@ img { max-width: 100%; display: block; }
   .wrap { padding: 0 20px; }
 }
 
+/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -64,6 +65,7 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ---------- Focus ---------- */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -73,6 +75,9 @@ textarea:focus-visible {
   border-radius: 2px;
 }
 
+/* ===========================================================
+   Nav
+   =========================================================== */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -152,6 +157,7 @@ textarea:focus-visible {
   .nav__toggle { display: block; }
 }
 
+/* mobile drawer */
 .nav__drawer {
   display: none;
   flex-direction: column;
@@ -168,6 +174,9 @@ textarea:focus-visible {
 }
 .nav__drawer a.active { color: var(--accent); }
 
+/* ===========================================================
+   Hero
+   =========================================================== */
 .hero {
   padding: 168px 0 64px;
   position: relative;
@@ -258,6 +267,7 @@ textarea:focus-visible {
   color: var(--accent);
 }
 
+/* ---------- Marquee ---------- */
 .marquee {
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
@@ -292,6 +302,9 @@ textarea:focus-visible {
   .marquee__track { animation: none; }
 }
 
+/* ===========================================================
+   Stats
+   =========================================================== */
 .stats {
   padding: 56px 0;
   border-bottom: 1px solid var(--border-soft);
@@ -321,6 +334,9 @@ textarea:focus-visible {
   .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
 }
 
+/* ===========================================================
+   Section heading pattern
+   =========================================================== */
 .section {
   padding: 96px 0;
 }
@@ -376,6 +392,9 @@ textarea:focus-visible {
 }
 .section__link:hover { color: var(--accent); border-color: var(--accent); }
 
+/* ===========================================================
+   Work grid / cards
+   =========================================================== */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -458,6 +477,9 @@ textarea:focus-visible {
 .card:hover .card__foot .arrow { transform: translateX(4px); color: var(--accent); }
 .card:hover .card__foot { color: var(--accent); }
 
+/* ===========================================================
+   What I Do — disciplines
+   =========================================================== */
 .disciplines {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -510,6 +532,9 @@ textarea:focus-visible {
   border-radius: 12px;
 }
 
+/* ===========================================================
+   Editing-marks signature motif
+   =========================================================== */
 .redline {
   position: relative;
 }
@@ -531,6 +556,9 @@ textarea:focus-visible {
   line-height: 1.6;
 }
 
+/* ===========================================================
+   Footer / Contact
+   =========================================================== */
 .contact-block {
   border-top: 1px solid var(--border-soft);
   padding: 96px 0 64px;
@@ -589,6 +617,9 @@ footer.site-footer {
   color: var(--text-faint);
 }
 
+/* ===========================================================
+   Filter tabs (Work page)
+   =========================================================== */
 .filters {
   display: flex;
   gap: 10px;
@@ -616,6 +647,9 @@ footer.site-footer {
   border-color: var(--text);
 }
 
+/* ===========================================================
+   About page
+   =========================================================== */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -664,6 +698,9 @@ footer.site-footer {
   margin-top: 8px;
 }
 
+/* ===========================================================
+   Modal — full piece reader
+   =========================================================== */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -671,10 +708,9 @@ footer.site-footer {
   backdrop-filter: blur(4px);
   z-index: 1000;
   display: none;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 56px 20px;
-  overflow-y: auto;
+  padding: 24px 16px;
 }
 .modal-overlay.open { display: flex; }
 
@@ -683,13 +719,16 @@ footer.site-footer {
   border: 1px solid var(--border);
   max-width: 760px;
   width: 100%;
+  max-height: calc(100vh - 48px);
   border-radius: 4px;
   padding: 48px;
   position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 640px) {
-  .modal { padding: 32px 24px; }
+  .modal { padding: 32px 24px; max-height: calc(100vh - 32px); }
 }
 
 .modal__close {
@@ -781,6 +820,7 @@ footer.site-footer {
   font-style: italic;
 }
 
+/* utility */
 .fade-up {
   opacity: 0;
   transform: translateY(16px);
