@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBody.innerHTML = tpl.innerHTML;
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
-    overlay.scrollTop = 0;
+    const modalEl = overlay.querySelector('.modal');
+    if (modalEl) modalEl.scrollTop = 0;
   }
 
   function closeModal() {
